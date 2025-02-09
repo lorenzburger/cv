@@ -28,7 +28,7 @@ const CvWrapper = styled.div`
   font-family: monospace;
   color: lime;
   font-size: 1rem;
-  width: 85%;
+  width: 75%;
   max-height: 90vh; /* Restrict to avoid overflow */
   overflow-y: auto; /* Enables scrolling if content overflows */
   opacity: ${(props) => (props.visible ? 1 : 0)};

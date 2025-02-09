@@ -111,10 +111,10 @@ const Home = forwardRef((props, ref) => {
             <Typewriter
               onInit={(typewriter) => {
                 typewriter
-                  .changeDelay(40)
-                  .typeString("Hi")
-                  .pauseFor(500)
-                  .typeString(", I'm Lorenz.")
+                  .changeDelay(90)
+                  .typeString("Hi, ")
+                  .pauseFor(1000)
+                  .typeString("I'm Lorenz.")
                   .callFunction(() => {
                     setBackgroundLocked(false); // Unlock background transition
                     setTimeout(() => {

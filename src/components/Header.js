@@ -1,6 +1,5 @@
-import { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import { Link } from "react-router-dom";
+import styled from 'styled-components'
+import { Link } from "react-router-dom"
 
 const HeaderWrap = styled.div`
   font-family: monospace;
@@ -9,7 +8,7 @@ const HeaderWrap = styled.div`
   left: 0;
   width: 100%;
   z-index: 1000;
-`;
+`
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -19,7 +18,7 @@ const HeaderContainer = styled.div`
     flex-direction: column;
     justify-content: space-around;
   };
-`;
+`
 
 const Fader = styled.div`
   flex: 1;
@@ -33,7 +32,7 @@ const Fader = styled.div`
   
   &:hover {
     a {
-      opacity: 0.5;
+      opacity: 0.3;
     }
   }
   a {
@@ -51,7 +50,7 @@ const Burger = styled(Link)`
   font-weight: bold;
   text-decoration: none;
   margin: 5px 10px;
-  cursor: pointer;
+  cursor: crosshair;
   font-size: 1.25rem;
 
   :active {
@@ -62,11 +61,11 @@ const Burger = styled(Link)`
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0;
-    white-space: nowrap;
+    margin: 0; /* Remove default paragraph margin */
+    white-space: nowrap; /* Prevent line breaks */
     font-size: 1.25rem;
   }
-`;
+`
 
 const Menu = styled.div`
   display: flex;
@@ -76,10 +75,10 @@ const Menu = styled.div`
   @media (max-width: 388px) {
    flex-direction: column;
   };
-`;
+`
 
 const HeaderElement = styled(Link)`
-  color: ${({ active }) => (active ? 'red' : 'white')};
+  color: white;
   font-weight: bold;
   text-decoration: none;
   cursor: crosshair;
@@ -88,48 +87,9 @@ const HeaderElement = styled(Link)`
   :active {
     transform: scale(0.9, 0.9);
   }
-`;
+`
 
-export default function Header({ contactClick, projectsClick, burgerClick, cvClick, refHome, refQuotes, refCV }) {
-  const [activeSection, setActiveSection] = useState(null);
-
-  useEffect(() => {
-    const sections = [
-      { id: "home", ref: refHome },
-      { id: "quotes", ref: refQuotes },
-      { id: "cv", ref: refCV },
-    ];
-
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      let closestSection = sections[0].id; // Default to first section
-
-      sections.forEach(({ id, ref }) => {
-        if (ref.current) {
-          const rect = ref.current.getBoundingClientRect();
-          if (rect.top >= -rect.height / 2 && rect.top < window.innerHeight / 2) {
-            closestSection = id;
-          }
-        }
-      });
-
-      setActiveSection(closestSection);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Run once on mount
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [refHome, refQuotes, refCV]);
-
-  const scrollToSection = (ref) => {
-    if (ref?.current) {
-      ref.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
+export default function Header({ contactClick, projectsClick, burgerClick, cvClick }) {
   return (
     <HeaderWrap>
       <HeaderContainer>
@@ -138,13 +98,13 @@ export default function Header({ contactClick, projectsClick, burgerClick, cvCli
             <p>lorenz 🍔</p>
           </Burger>
           <Menu>
-            <HeaderElement to='#quotes' onClick={projectsClick} active={activeSection === "quotes"}>
+            <HeaderElement to='#quotes' onClick={projectsClick}>
               <p> projects </p>
             </HeaderElement>
-            <HeaderElement to='#cv' onClick={cvClick} active={activeSection === "cv"}>
+            <HeaderElement to='#cv' onClick={cvClick}>
               <p> cv </p>
             </HeaderElement>
-            <HeaderElement to='#contact' onClick={contactClick} active={activeSection === "contact"}>
+            <HeaderElement to='#contact' onClick={contactClick}>
               <p> contact </p>
             </HeaderElement>
           </Menu>

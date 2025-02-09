@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css, keyframes } from 'styled-components';
-import { Link } from 'react-router-dom';
 
 const bounce = keyframes`
   0% { transform: translateY(50px); }
@@ -60,8 +59,9 @@ const Fader = styled.div`
   }
   a:hover {
     opacity: 1;
-    cursor: pointer;
+    cursor: crosshair;
   }
+  pointer-events: ${(props) => (props.bump ? `auto` : `none`)};
 `;
 
 const Bubble = styled.p`
@@ -92,6 +92,7 @@ const FooterElement = styled.div`
   justify-content: space-around;
   width: 100%;
   gap: 15px;
+
 `;
 
 const StyledSocialBadge1 = styled.a`
@@ -102,6 +103,7 @@ const StyledSocialBadge1 = styled.a`
   color: white;
   text-decoration: none;
   font-weight: bold;
+  cursor: crosshair;
 `;
 
 const StyledSocialBadge2 = styled.a`
@@ -112,6 +114,7 @@ const StyledSocialBadge2 = styled.a`
   color: white;
   text-decoration: none;
   font-weight: bold;
+  cursor: crosshair;
 `;
 
 const StyledSocialBadge3 = styled.a`
@@ -122,6 +125,7 @@ const StyledSocialBadge3 = styled.a`
   color: white;
   text-decoration: none;
   font-weight: bold;
+  cursor: crosshair;
 `;
 
 const StyledSocialBadge4 = styled.a`
@@ -132,6 +136,7 @@ const StyledSocialBadge4 = styled.a`
   color: white;
   text-decoration: none;
   font-weight: bold;
+  cursor: crosshair;
 `;
 
 export default function Footer({ bump, fade }) {

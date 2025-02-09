@@ -66,13 +66,10 @@ function App() {
           cvClick={handlecvClick} 
           contactClick={handleContactClick} 
           projectsClick={handleProjectsClick} 
-          refHome={refHome} 
-          refQuotes={refQuotes} 
-          refCV={refCV}
         />
-        <Home id="home" ref={refHome}/>
-        <Quotes id="quotes" ref={refQuotes}/>
-        <CV id="cv" ref={refCV}/>
+        <Home ref={refHome}/>
+        <Quotes ref={refQuotes}/>
+        <CV ref={refCV}/>
         <Footer bump={bump} fade={fade} />
       </ScrollContainer>
     </Main>
