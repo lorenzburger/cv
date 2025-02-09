@@ -8,6 +8,8 @@ const HeaderWrap = styled.div`
   left: 0;
   width: 100%;
   z-index: 1000;
+  padding-left: 5px; /* Add some padding */
+  padding-right: 5px; /* Add some padding */
 `
 
 const HeaderContainer = styled.div`
