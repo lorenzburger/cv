@@ -78,6 +78,11 @@ const Home = forwardRef((props, ref) => {
   const [showTypewriter, setShowTypewriter] = useState(false);
 
   useEffect(() => {
+
+    // Preload the modified Nighthawks image
+    const img = new Image();
+    img.src = modifiedNighthawks;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
