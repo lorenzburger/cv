@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.1e85f2cb.css",
-    "main.js": "/static/js/main.b6818aff.js",
+    "main.js": "/static/js/main.a3aefe87.js",
     "static/media/modified-nighthawks.jpeg": "/static/media/modified-nighthawks.ec1cba40b8d339cde236.jpeg",
     "index.html": "/index.html",
     "main.1e85f2cb.css.map": "/static/css/main.1e85f2cb.css.map",
-    "main.b6818aff.js.map": "/static/js/main.b6818aff.js.map"
+    "main.a3aefe87.js.map": "/static/js/main.a3aefe87.js.map"
   },
   "entrypoints": [
     "static/css/main.1e85f2cb.css",
-    "static/js/main.b6818aff.js"
+    "static/js/main.a3aefe87.js"
   ]
 }
