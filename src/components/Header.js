@@ -28,7 +28,7 @@ const Fader = styled.div`
   flex-direction: row;
   justify-content: space-between;
   @media (max-width: 600px) {
-    justify-content: space-evenly;
+    justify-content: flex-start;
   };
   flex-wrap: nowrap;
   
@@ -51,7 +51,7 @@ const Burger = styled(Link)`
   color: white;
   font-weight: bold;
   text-decoration: none;
-  margin: 5px 10px;
+  margin: 5px 10px 5px 15px; /* Add extra left margin */
   cursor: crosshair;
   font-size: 1.25rem;
 
