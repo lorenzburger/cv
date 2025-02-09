@@ -118,49 +118,49 @@ const CV = forwardRef((props, ref) => {
 
   return (
     <NinthWave ref={ref}>
-      <Wrapper>
-        <BackgroundImage />
-        <CvWrapper visible={visible}>
-          <h2>CV</h2>
-          <Grid>
-            <DateColumn>2024 - Present</DateColumn>
-            <ContentColumn>
-              <strong>Learning a lot at 
-                <a style={{ color: 'lightgray', textDecoration: 'none' }} rel="Qlibri" href="https://www.qlibri.eu"> Qlibri</a>
-              </strong>  
-              <p>Working on improving the  passiv stability of optical micro cavities and pushing the boundaries of whats possible in cryogenic positioning.</p>
-            </ContentColumn>
-            <DateColumn>2022 - Present</DateColumn>
-            <ContentColumn>
-              <strong>M.Sc. Micro- & Nanotechnolgy, HM 
-              </strong>  
-              <p>Started this because I wanted to dive deeper into the natural sciences and their real world applications.</p>
-            </ContentColumn>
-
-            <DateColumn>2019 - 2024</DateColumn>
-            <ContentColumn>
-              <strong>Radiation Engineer, BfS</strong>  
-              <p>Worked for the german federal office for radiation protection (BfS), in the "environmental radioactivity" division. Flew in a helicopter over the chornobyl exclusion zone to 
-              <a style={{ color: 'lightgray', textDecoration: 'none' }} rel="bfs" href="https://www.bfs.de/SharedDocs/Pressemitteilungen/BfS/EN/2022/006.html"> remap </a>
-              the spatial distribution of Cs-137 in 2021. </p>
-            </ContentColumn>
-
-            <DateColumn>2016 - 2019</DateColumn>
-            <ContentColumn>
-              <strong>M.A. History of Science and Technology, TU Berlin</strong>  
-              <p>Focus on history of technology. For my master's thesis I examined the dynamics of the phase-out of lead based hunting ammunition in Germany from the 80s to 2000. </p>
-            </ContentColumn>
-
-            <DateColumn>2012 - 2016</DateColumn>
-            <ContentColumn>
-              <strong>B.Sc. Engineering Physics, HM</strong>  
-              <p>Focus on semiconductor physics. For my bachelor's thesis I detected excitonic systems in silicon which can be used to detect nitrogen impurities using photoluminisecenes at low temperatures. </p>
-            </ContentColumn>
-          </Grid>
-        </CvWrapper>
-      </Wrapper>
-    </NinthWave>
+    <Wrapper>
+      <BackgroundImage />
+      <CvWrapper visible={visible}>
+        <h2>CV</h2>
+        <Grid>
+          <DateColumn>2024 - Present</DateColumn>
+          <ContentColumn>
+            <strong>Learning a lot at 
+              <a style={{ color: 'lightgray', textDecoration: 'none' }} rel="Qlibri" href="https://www.qlibri.eu"> Qlibri</a>
+            </strong>  
+            <p>Working on improving passive stability in optical microcavities and pushing the boundaries of what's possible in cryogenic positioning.</p>
+          </ContentColumn>
+          <DateColumn>2022 - Present</DateColumn>
+          <ContentColumn>
+            <strong>M.Sc. Micro- & Nanotechnology, HM</strong>  
+            <p>Focus on quantum information, quantum sensing, and micro- and nanotechnological devices.</p>
+          </ContentColumn>
+  
+          <DateColumn>2019 - 2024</DateColumn>
+          <ContentColumn>
+            <strong>Radiation Engineer, BfS</strong>  
+            <p>Worked for the German Federal Office for Radiation Protection (BfS) in the "Environmental Radioactivity" division. Flew over the Chernobyl Exclusion Zone in a helicopter to 
+            <a style={{ color: 'lightgray', textDecoration: 'none' }} rel="bfs" href="https://www.bfs.de/SharedDocs/Pressemitteilungen/BfS/EN/2022/006.html"> remap </a>
+            the spatial distribution of Cs-137 there in 2021.</p>
+          </ContentColumn>
+  
+          <DateColumn>2016 - 2019</DateColumn>
+          <ContentColumn>
+            <strong>M.A. History of Science and Technology, TU Berlin</strong>  
+            <p>Focus on the history of technology. For my master's thesis, I examined the dynamics of the phase-out of lead-based hunting ammunition in Germany from the 1980s to 2000.</p>
+          </ContentColumn>
+  
+          <DateColumn>2012 - 2016</DateColumn>
+          <ContentColumn>
+            <strong>B.Sc. Engineering Physics, HM</strong>  
+            <p>Focus on semiconductor physics. For my bachelor's thesis, I detected excitonic systems in silicon that can be used to detect nitrogen impurities using photoluminescence at low temperatures.</p>
+          </ContentColumn>
+        </Grid>
+      </CvWrapper>
+    </Wrapper>
+  </NinthWave>
   );
+  
 });
 
 export default CV;

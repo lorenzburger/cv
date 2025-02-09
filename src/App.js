@@ -61,14 +61,23 @@ function App() {
   return (
     <Main>
       <ScrollContainer>
-      <Header burgerClick={() => handleBurgerClick()} cvClick={() => handlecvClick()} contactClick={() => handleContactClick()} projectsClick={() => handleProjectsClick()} otherClick={() => resetState()} />
-      <Home ref={refHome}/>
-      <Quotes ref={refQuotes}/>
-      <CV ref={refCV}/>
-      <Footer bump={bump} fade={fade} />
+        <Header 
+          burgerClick={handleBurgerClick} 
+          cvClick={handlecvClick} 
+          contactClick={handleContactClick} 
+          projectsClick={handleProjectsClick} 
+          refHome={refHome} 
+          refQuotes={refQuotes} 
+          refCV={refCV}
+        />
+        <Home id="home" ref={refHome}/>
+        <Quotes id="quotes" ref={refQuotes}/>
+        <CV id="cv" ref={refCV}/>
+        <Footer bump={bump} fade={fade} />
       </ScrollContainer>
     </Main>
   );
+    
 }
 
 export default App;

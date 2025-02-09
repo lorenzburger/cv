@@ -124,6 +124,16 @@ const StyledSocialBadge3 = styled.a`
   font-weight: bold;
 `;
 
+const StyledSocialBadge4 = styled.a`
+  opacity: ${(props) => (props.bump ? 1 : 0)};
+  transition: opacity 0.5s ease-out;
+  pointer-events: ${(props) => (props.bump ? `auto` : `none`)};
+  animation: ${(props) => (props.bump ? css`${bounce} 0.8s normal forwards ease-in-out` : null)};
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+`;
+
 export default function Footer({ bump, fade }) {
   return (
     <FooterWrapper>
@@ -140,6 +150,9 @@ export default function Footer({ bump, fade }) {
           <StyledSocialBadge3 bump={bump} href="http://linkedin.com/in/lorenzburger" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </StyledSocialBadge3>
+          <StyledSocialBadge4 bump={bump} href="mailto:me@lorenzburger.com" target="_blank" rel="noopener noreferrer">
+            e-mail
+          </StyledSocialBadge4>
         </FooterElement>
       </Fader>
     </FooterWrapper>
