@@ -28,7 +28,7 @@ const Fader = styled.div`
   flex-direction: row;
   justify-content: space-between;
   @media (max-width: 600px) {
-    justify-content: flex-start;
+    justify-content: space-around;
   };
   flex-wrap: nowrap;
   
@@ -74,8 +74,13 @@ const Menu = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  @media (max-width: 600px) {
+   flex-direction: row;
+   justify-content: flex-start;
+  };
   @media (max-width: 388px) {
    flex-direction: column;
+   justify-content: flex-start;
   };
 `
 
@@ -89,6 +94,9 @@ const HeaderElement = styled(Link)`
   :active {
     transform: scale(0.9, 0.9);
   }
+    @media (max-width: 600px) {
+   margin: 10px 10px;
+  };
 `
 
 export default function Header({ contactClick, projectsClick, burgerClick, cvClick }) {
