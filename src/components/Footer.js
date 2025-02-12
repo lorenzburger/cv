@@ -67,18 +67,23 @@ const Fader = styled.div`
 const Bubble = styled.p`
   opacity: ${(props) => (props.fade ? 0.8 : 0)};
   pointer-events: ${(props) => (props.fade ? `auto` : `none`)};
-  animation: ${(props) => (props.fade ? css`${fadeInOut} 6.5s normal forwards ease-in-out` : null)};
+  animation: ${(props) =>
+    props.fade ? css`${fadeInOut} 6.5s normal forwards ease-in-out` : null};
   position: absolute;
   background: #8efa00;
-  border-radius: 0.4em;
+  border-radius: 0.6em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform: translateX(165px);
   right: 50%;
   top: -30px;
   width: 330px;
   height: 18px;
-  text-align: center;
   font-size: 12px;
   color: black;
+
   @media (max-width: 600px) {
     top: 5%;
     font-size: 10px;
@@ -144,7 +149,7 @@ export default function Footer({ bump, fade }) {
     <FooterWrapper>
       <BackgroundImage />
       <Fader>
-        <Bubble fade={fade}>I have been very lazy, you should try again!</Bubble>
+        <Bubble fade={fade}>Feeling lazy, might add projects later.</Bubble>
         <FooterElement>
           <StyledSocialBadge1 bump={bump} href="http://github.com/lorenzburger" target="_blank" rel="noopener noreferrer">
             GitHub

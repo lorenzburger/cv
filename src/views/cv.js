@@ -133,7 +133,7 @@ const CV = forwardRef((props, ref) => {
           <DateColumn>2022 - Present</DateColumn>
           <ContentColumn>
             <strong>M.Sc. Micro- & Nanotechnology, HM</strong>  
-            <p>Focus on quantum information, quantum sensing, and micro- and nanotechnological devices.</p>
+            <p>Focus on micro- and nanotechnological devices, sprinkled with some quantum information and quantum sensing.</p>
           </ContentColumn>
   
           <DateColumn>2019 - 2024</DateColumn>
